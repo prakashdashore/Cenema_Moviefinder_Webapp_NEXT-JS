@@ -38,15 +38,6 @@ const page = () => {
           </div>
 
 
-
-
-          <div className="p-10 flex items-center justify-center ">
-            <div className="">
-            <Pagination total={10} initialPage={1} 
-             onChange={funky}
-            />
-            </div>
-          </div>
         </div>
       </div>
     </>
