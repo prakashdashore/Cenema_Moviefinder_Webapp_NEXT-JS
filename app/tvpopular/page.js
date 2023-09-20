@@ -31,20 +31,19 @@ const page = () => {
   return (
     <>
      <div className="mt-10 w-[100vw] min-h-[100vh]">
-        <div className=" min-h-[100vh] mx-auto sm:w-[80vw] mt-5">
-          <div className=" font-black text-3xl font-bold p-5">Here's Trending shows </div>
+     <div className=" min-h-[100vh] mx-auto sm:w-[80vw] mt-5">
+          <div className=" text-black text-3xl font-bold p-10">Popular On TV</div>
 
         <Suspense
         fallback={
           <div className="text-3xl text-black">loading</div>
         }
-      
         />
     
-          <div className=" mt-10 w-full h-full grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-10 px-28
+          <div className=" w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5
            ">
       
-            {shows && shows.map((items) => <MovieCard key={items.id} items={items} />)}
+            {movies && movies.map((items) => <MovieCard key={items.id} items={items} />)}
 
           </div>
 

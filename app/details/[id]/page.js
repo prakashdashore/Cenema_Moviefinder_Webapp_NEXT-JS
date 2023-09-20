@@ -189,7 +189,7 @@ const page = ({ params }) => {
                     className="inline-block pt-6 cursor-pointer"
                     onClick={() => setShowPlayer(true)}
                   >
-                    <div className="flex gap-2 items-center bg-white text-black px-4 py-2 mb-6 hover:bg-[#b4b4b4]">
+                    <div className="flex gap-2 items-center bg-blue-300 text-black px-4 py-2 mb-6 hover:bg-[#b4b4b4]">
                       <BsPlayFill size={24} />
                       Watch Trailer
                     </div>
@@ -238,7 +238,7 @@ const page = ({ params }) => {
             width="100%"
             height="100%"
             style={{ position: "absolute", top: "0", left: "0" }}
-            controls={false}
+            controls={true}
             playsinline={true}
             playing={showPlayer}
           />

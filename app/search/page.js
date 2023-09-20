@@ -19,18 +19,33 @@ const page = () => {
   return (
     <>
       <div className="w-[100vw] min-h-[100vh]">
-        <div className=" min-h-[100vh] mx-auto sm:w-[80vw] bg-white">
-          <div className=" font-black text-2xl font-bold ">Here's your search..</div>
+      <div className=" min-h-[100vh] mx-auto sm:w-[80vw] mt-5">
+          <div className=" text-black text-3xl font-bold p-10">Your Searchings...</div>
 
-          <div className=" mt-10 w-full h-full grid grid-cols-1 sm:grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-10 justify-evenly  px-24">
+        <Suspense
+        fallback={
+          <div className="text-3xl text-black">loading</div>
+        }
+        />
+    
+          <div className=" w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5
+           ">
             {d}
-            {waiting(500)}
-            {movies &&
-              movies.map((items) => <MovieCard key={items.id} items={items} />)}
+            {waiting(1000)}
+      
+            {movies && movies.map((items) => <MovieCard key={items.id} items={items} />)}
+
           </div>
 
+
+
+
           <div className="p-10 flex items-center justify-center ">
-            
+            <div className="">
+            <Pagination total={10} initialPage={1} 
+             onChange={funky}
+            />
+            </div>
           </div>
         </div>
       </div>

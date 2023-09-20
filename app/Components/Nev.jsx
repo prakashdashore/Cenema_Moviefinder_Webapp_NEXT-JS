@@ -91,7 +91,8 @@ export default function App() {
         </NavbarContent>
       </NavbarContent>
 
-      <NavbarContent as="div" className=" w-full items-center" justify="end">
+      <NavbarContent as="div" className=" w-full items-center flex hidden md:flex
+      " justify="end">
         <form className=" w-full items-center  flex gap-2"  onSubmit={searchHandler}>
           <SearchIcon />
           <Input className="" type="text" placeholder="Search"
@@ -106,7 +107,7 @@ export default function App() {
             <Avatar
               isBordered="false"
               as="button"
-              className="transition-transform "
+              className="transition-transform hidden md:inline-block lg:inline-block "
               color="secondary"
               name="Jason Hughes"
               size="md"
