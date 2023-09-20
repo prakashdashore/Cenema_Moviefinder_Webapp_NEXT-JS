@@ -39,7 +39,7 @@ const page = () => {
           <div className=" w-fit mx-auto grid grid-cols-2 lg:grid-cols-4 md:grid-cols-4 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5
            ">
       
-            {movies && movies.map((items) => <MovieCard key={items.id} items={items} />)}
+            {shows && shows.map((items) => <MovieCard key={items.id} items={items} />)}
 
           </div>
 
