@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use } from "react";
+import React, { Suspense, use } from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "../Components/MovieCard";
 import { waiting } from "@/fetch";
