@@ -11,7 +11,10 @@ import Link from "next/link";
 
 const VolThreeCard = ({ items }) => {
   return (
-    <Link href={`details/${items.id}`}>
+    <Link
+      className="w-full h-[300px] col-span-12 sm:col-span-7"
+      href={`details/${items.id}`}
+    >
       <Card
         isFooterBlurred
         className="w-full h-[300px] col-span-12 sm:col-span-7"
